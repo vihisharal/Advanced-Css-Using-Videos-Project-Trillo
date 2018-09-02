@@ -1,0 +1,164 @@
+.container {
+    max-width: 120rem;
+    margin: 4rem auto;
+    background-color: $c-grey-light-2;
+    box-shadow: $shadow-dark;
+    min-height: 40rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.header {
+    height: 7rem;
+    font-size: 1.4rem;
+    background-color: #ffffff;
+    ;
+    border-bottom: $bb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: $bp-smallest){
+        flex-wrap: wrap;
+        height: 10rem;
+        align-content: space-around;
+    }
+}
+
+.content {
+    display: flex;
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+
+.sidebar {
+    background-color: $c-grey-dark-1;
+    flex: 0 0 18%;
+    /*grow shrink bases*/
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hotel-view {
+    background-color: $c-grey-light-1;
+    flex: 1;
+    /*shold grow as much as posible*/
+}
+
+.detail {
+    display: flex;
+    background-clip: red;
+    padding: 4.5rem;
+    border-bottom: $bb;
+    font-size: 1.4rem;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+    @media only screen and (max-width:$bp-small) {
+        flex-direction: column;
+    }
+
+    &__description {
+        background-color: #fff;
+        box-shadow: $bs;
+        padding: 3rem;
+        flex: 0 0 60%;
+        margin-right: 4.5rem;
+        font-size: 1.4rem;
+        @media only screen and (max-width: $bp-medium) {
+            margin-right: 3rem;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            margin-right: 0;
+            margin-bottom: 3rem;
+        }
+        
+        &-para {
+            &:not(:last-of-type) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    &__list {
+        margin: 3rem 0;
+        list-style: none;
+        padding: 3rem 0;
+        border-top: $bb;
+        border-bottom: $bb;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            flex: 0 0 50%;
+            margin-bottom: .3rem;
+            display: flex;
+            align-items: center;
+
+            &-icon {
+                display: block;
+                height: 1.2rem;
+                width: 1.2rem;
+                margin-right: .7rem;
+                fill: $c-primary;
+            }
+            /* svg loading problem    
+            &::before {
+                content: "";
+                display: block;
+                height: 2rem;
+                width: 2rem;
+                position: relative;
+                margin-right: .7rem;
+                
+                //old browser
+                background-image: url(../resources/img/symbol-defs.svg#icon-circle-right);
+                background-size: cover;
+                
+                // new
+                background-color: $c-primary;
+                -webkit-mask-image:url(../resources/img/symbol-defs.svg#icon-circle-right);
+                -webkit-mask-size: cover;
+            }*/
+        }
+    }
+    &__recommend {
+        font-size: 1.3rem;
+        color: $c-grey-dark-3;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &_count {}
+        &_photo {
+
+            display: flex;
+            &-img {
+                box-sizing: content-box;
+                height: 4rem;
+                width: 4rem;
+                border-radius: 50%;
+                border: 3px solid #fff;
+                &:not(:last-child) {
+                    margin-right: -1.5rem;
+                    @media only screen and (max-width: $bp-large) {
+                        margin-right:-2rem;
+                    }
+
+                }
+            }
+        }
+    }
+    &__user-review {
+        background-color: $c-grey-light-1;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

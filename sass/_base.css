@@ -1,0 +1,37 @@
+/* line 23, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/trillo.css.project/sass/_base.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* line 31, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/trillo.css.project/sass/_base.scss */
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/* line 39, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/trillo.css.project/sass/_base.scss */
+::selection {
+  background-color: #eb2f64;
+  color: #faf9f9; }
+
+/* line 44, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/trillo.css.project/sass/_base.scss */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 68.75em) {
+    /* line 44, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/trillo.css.project/sass/_base.scss */
+    html {
+      font-size: 50%; } }
+
+/* line 52, /home/vishal/Videos/Study/Web/Advanced CSS and Sass Flexbox Grid Animations and More Jonas Schmedtmann/Coding/Project/trillo.css.project/sass/_base.scss */
+body {
+  background-color: #333;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right bottom, #ff3366, #ba265d);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+/*# sourceMappingURL=_base.css.map */

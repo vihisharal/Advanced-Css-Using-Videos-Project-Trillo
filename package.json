@@ -1,0 +1,31 @@
+{
+    "name": "trillo.advanced.css.project",
+    "version": "1.0.0",
+    "description": "Booking website app :trillo",
+    "main": "index.js",
+    "scripts": {
+        "compile-sass-watch": "sass sass/main.scss resources/css/style.css",
+        "dev-server": "live-server",
+        "remove-map-file": "find . -type f -name '*.css.map' -delete",
+        "rm-css-1": "rm -f resources/css/style.css resources/css/style.css.map sass/main.css sass/main.css.map ",
+        "start": "npm-run-all --parallel dev-server compile-sass-watch",
+        "cleanwork": "npm-run-all remove-map-file rm-css-1 compile-sass-watch",
+
+        "compile-sass": "sass sass/main.scss resources/css/style_comp.css",
+        "concat-css": "concat -o resources/css/style_concat.css resources/css/open-sans-fonts.300.400.600.css resources/css/style_comp.css",
+        "prefix-css": "postcss --use autoprefixer -b 'last 10 versions' resources/css/style_concat.css -o resources/css/style_prefix.css",
+        "compress-css": "sass resources/css/style_prefix.css  resources/css/style.min.css --style compressed",
+        "remove-auto-genrated-css": "find . -type f -name 'style_*.css' -delete",
+
+        "build-css": "npm-run-all compile-sass concat-css prefix-css compress-css remove-map-file remove-auto-genrated-css"
+    },
+    "author": "Vishal Gavali",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^9.1.3",
+        "concat": "^1.0.3",
+        "node-sass": "^4.9.3",
+        "npm-run-all": "^4.1.3",
+        "postcss-cli": "^6.0.0"
+    }
+}
